@@ -1,0 +1,62 @@
+.trending__container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.first{
+    position: relative;
+    background-size: cover;
+    background-image: url('https://static.nike.com/a/images/f_auto/dpr_1.0/w_888,c_limit/3a61c1d3-f87d-4fd8-9d2e-1e16f89792d4/nike-just-do-it.jpg');
+}
+
+.second{
+    position: relative;
+    background-size: cover;
+    background-image: url('https://static.nike.com/a/images/f_auto/dpr_1.0/w_888,c_limit/8c0a8f96-2c04-4065-ae7c-4eb71f45ad2b/nike-just-do-it.jpg');
+}
+
+.second > .trend{
+    position: absolute;
+    bottom: 20px;
+    margin-left: 40px;
+}
+
+.first > .trend p{
+    color: #fff;
+}
+
+.first > .trend button{
+    background-color: #fff;
+    color: #000;
+}
+
+.first > .trend{
+    position: absolute;
+    bottom: 20px;
+    margin-left: 40px;
+}
+
+.trending{
+    padding: 30px 0px;
+}
+
+.trend__btn{
+    padding: 10px 24px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    margin: 20px 0px;
+}
+
+.trending > h3{
+    padding: 10px 0px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+/* npx create-react-app react-nomi */

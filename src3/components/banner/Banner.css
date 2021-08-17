@@ -1,0 +1,59 @@
+@font-face {
+    font-family: Nike Futura;
+    src: url('../../fonts/Futura\ Condensed\ Extra\ Bold.otf');
+}
+
+.main__bannerContent{
+    width: 100%;
+    height: 1100px;
+    background-image: url('https://static.nike.com/a/images/f_auto/dpr_1.0/w_1792,c_limit/536e64b8-e1ac-4bf2-b312-8df0144ed705/nike-just-do-it.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.main__bannerInfo{
+    position: absolute;
+    bottom: 80px;
+    width: 450px;
+}
+
+.main__bannerInfo > h1{
+    padding: 0px 40px 20px 40px;
+    line-height: 70px;
+    font-size: 80px;
+    letter-spacing: -5px;
+    font-family: Nike Futura;
+    user-select: none;
+}
+
+.main__bannerInfo > p{
+    line-height: 27px;
+    padding: 0px 40px;
+    font-size: 18px;
+    word-spacing: 1px;
+    user-select: none;
+}
+
+.shop__btn{
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 24px;
+    font-size: 20px;
+    border-radius: 20px;
+    margin: 20px 40px;
+    user-select: none;
+}
+
+.contentSeparator{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.contentSeparator > span{
+    font-family: Nike Futura;
+    font-size: 80px;
+}
