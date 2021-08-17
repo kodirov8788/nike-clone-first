@@ -13,9 +13,6 @@ function MainHeader() {
   const handleExtendData = (exdendedData) => {
     setExtend(exdendedData);
   };
-  // const handleExtendData2 = (exdendedData) => {
-  //   setExtend2(exdendedData);
-  // };
   console.log(extend2);
   return (
     <div className={actionSearch ? "active__header" : "main__header"}>
@@ -41,10 +38,6 @@ function MainHeader() {
               onMouseOut={() => (
                 setExtend(false), setExtend2(mainNavItem.additionalSections)
               )}
-              // onMouseOver={() => (
-              //   handleExtendData(mainNavItem?.additionalSections),
-              //   handleExtendData2(mainNavItem?.additionalSections)
-              // )}
               onMouseOver={() =>
                 handleExtendData(mainNavItem?.additionalSections)
               }
@@ -56,35 +49,25 @@ function MainHeader() {
           ))}
         </ul>
         <div
-          // onMouseOver={() => (setExtend(!extend), setExtend2(!extend2))}
-          // onMouseOut={() => (setExtend(!extend), setExtend2(!extend2))}
-
           onMouseOver={() => setExtend(!extend)}
           onMouseOut={() => setExtend(!extend)}
           className={extend ? "mainHeader__extend" : "mainHeader__close"}
         >
-          {/* {
-            MAIN_HEADER_DATA?.map(item => (
-              item.additionalSections.map(item2 => (
-                item2.allRoutes.map(item3 => (
-                  <p>{item3.title}</p>
-                ))
-              ))
-            ))
-          } */}
-
           {extend
             ? extend2?.map((item2) =>
-                    // <h2>{item2.extendTitle}</h2>
-                item2.allRoutes.map((item3) => (
-                  <>
-                  <h2>{item3.id}</h2>
-                    <p>{item3.title}</p>
-                  </>
-                ))
-              )
+
+              <div className="nav__extend__container">
+                <div className="navbar__extend__header">
+                  <h2>{item2.extendTitle}</h2>
+                </div>
+                <div className="navbar__extend__title">
+                  <p>{item2.title}</p>
+                </div>
+              </div>
+
+            )
             : ""}
-             
+
         </div>
         <div
           className={
