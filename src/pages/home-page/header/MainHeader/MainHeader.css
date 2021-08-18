@@ -101,7 +101,8 @@
     top: 105px;
     left: 0px;
     transform-origin: top;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
+    background-color: #fff;
     transition: all 0.5s;
 }
 
@@ -185,10 +186,21 @@
 }
 
 /* ------------------ Navbar__extend---------------- */
-.nav__extend__container {
+/* .nav__extend__container {
+    width: 50%;
     display: flex;
+    margin: 0 auto;
+    color: black;
+    border: 1px #000 solid;
+    flex-direction: column;
 }
 
-.navbar__extend__header {}
+.nav__extend__container a {
+    text-decoration: none;
+}
 
-.navbar__extend__title {}
+.navbar__extend__box {
+    border: 1px solid #000;
+}
+
+.navbar__extend__title {} */

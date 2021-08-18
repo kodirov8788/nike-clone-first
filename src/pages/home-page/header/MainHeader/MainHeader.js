@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./MainHeader.css";
 import nikeLogo from "../../../../assets/nike.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { MAIN_HEADER_DATA } from "../../../../data/header-data/MAIN_HEADER_DATA";
 import { SEARCH_RESULTS_DATA } from "../../../../data/header-data/SEARCH_RESULTS_DATA";
 import { FiSearch, FiHeart, FiShoppingBag, FiX } from "react-icons/fi";
+import Extendnav from "../ExtendNavbar/Extendnav";
 
 function MainHeader() {
   const [actionSearch, setActionSearch] = useState(false);
@@ -13,7 +14,7 @@ function MainHeader() {
   const handleExtendData = (exdendedData) => {
     setExtend(exdendedData);
   };
-  console.log(extend2);
+  // console.log(extend3);
   return (
     <div className={actionSearch ? "active__header" : "main__header"}>
       <div
@@ -52,21 +53,25 @@ function MainHeader() {
           onMouseOver={() => setExtend(!extend)}
           onMouseOut={() => setExtend(!extend)}
           className={extend ? "mainHeader__extend" : "mainHeader__close"}
-        >
-          {extend
-            ? extend2?.map((item2) =>
-
-              <div className="nav__extend__container">
-                <div className="navbar__extend__header">
-                  <h2>{item2.extendTitle}</h2>
+        ><div >
+            {extend
+              ? extend2?.map((item2) =>
+              (
+                <div >
+                  <Extendnav router={`/${item2.route}`} header={item2.extendTitle}
+                  />
                 </div>
-                <div className="navbar__extend__title">
-                  <p>{item2.title}</p>
-                </div>
-              </div>
+                ,
 
-            )
-            : ""}
+                item2.allRoutes?.map((item3) => (
+                  <div >
+                    <Extendnav item={item3.title} route={`/${item3.route}`} />
+                  </div>
+                ))
+              )
+              )
+              : ""}
+          </div>
 
         </div>
         <div
